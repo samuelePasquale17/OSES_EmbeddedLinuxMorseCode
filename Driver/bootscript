@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cd /lib/modules/6.1.30-xilinx-v2023.2/extra/
+modprobe morsedriver.ko
+cd /
+mknod /dev/morse_Dev c 244 0
+chmod 777 /dev/morse_Dev
+
